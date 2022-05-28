@@ -4,8 +4,24 @@
 }
 
 .home {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    h1 {
+        text-align: center;
+    }
+    .story-detail {
+        display: block;
+        width: inherit;
+        border: 1px solid black;
+        margin: 15px 0px 20px 0px;
+        padding: 10px;
+        div {
+            padding-top: 10px;
+        }
+    }
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
