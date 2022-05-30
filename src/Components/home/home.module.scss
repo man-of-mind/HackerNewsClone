@@ -4,24 +4,53 @@
 }
 
 .home {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(247, 108, 108);
     h1 {
+        margin-top: 35px;
+        margin-bottom: 15px;
         text-align: center;
     }
     .story-detail {
         display: block;
-        width: inherit;
-        border: 1px solid black;
+        width: 600px;
+        border: 1px solid rgb(233, 224, 224);
         margin: 15px 0px 20px 0px;
         padding: 10px;
+        border-radius: 4px;
         div {
             padding-top: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover {
+            font-weight: 600;
         }
     }
 }
 
 .sections {
     display: flex;
+    width: 650px;
     justify-content: space-between;
-    align-items: center;
+    text-decoration: none;
+    .link {
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(247, 108, 108);
+    }
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 900;
 }

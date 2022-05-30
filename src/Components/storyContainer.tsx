@@ -2,17 +2,18 @@ import React from "react";
 import styles from "./home/home.module.scss";
 
 export interface Props {
-    author: string,
+    by: string,
     title: string,
-    time: number,
-    totalComment: number
+    time: string,
+    descendants: number,
+    url: string
 }
 
-const StoryContainer:React.FC<Props> = ({ author, title, time, totalComment }) => {
+const StoryContainer:React.FC<Props> = ({ by, title, time, descendants, url }) => {
     return (
         <div className={styles['story-detail']}>
-            <span>{title}</span>
-            <div> {author} | {time} | {totalComment} comments </div>
+            <a href={url}>{title}</a>
+            <div> by {by} | {time} | {descendants} comments </div>
         </div>
     )
 }

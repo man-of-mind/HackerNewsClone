@@ -12,8 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate replace to="/top-stories" />} />
         <Route path="/top-stories" element={<HomePage />} />
-        <Route path='/best-stories/:str' element={<BestStories />} />
-        <Route path='/latest-stories/:str' element={<LatestStories />} /> 
+        <Route path='/best-stories/' element={<BestStories />} />
+        <Route path='/latest-stories/' element={<LatestStories />} /> 
       </Routes>
     </Router>
   );

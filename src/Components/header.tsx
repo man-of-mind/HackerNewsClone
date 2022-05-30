@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./home/home.module.scss";
 
 const Header = () => {
@@ -7,9 +7,30 @@ const Header = () => {
         <div>
             <h1>Hacker News Clone</h1>
             <div className={styles['sections']}>
-                <Link to="/top-stories">TOP STORIES</Link>
-                <Link to="/latest-stories/first">LATEST STORIES</Link>
-                <Link to="/best-stories/second">BEST STORIES</Link>
+                <NavLink 
+                    to="/top-stories"
+                    className={styles['link']}
+                    style={isActive => ({
+                        fontWeight: isActive ? "900" : "500",
+                        
+                      })}
+                >TOP STORIES</NavLink>
+                <NavLink 
+                    to="/latest-stories"
+                    className={styles['link']}
+                    style={isActive => ({
+                        fontWeight: isActive ? "900" : "500",
+                        
+                      })}
+                >LATEST STORIES</NavLink>
+                <NavLink 
+                    to="/best-stories"
+                    className={styles['link']}
+                    style={isActive => ({
+                        fontWeight: isActive ? "900" : "500",
+                        
+                      })}
+                >BEST STORIES</NavLink>
             </div>
         </div>
     );
